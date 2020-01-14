@@ -1,0 +1,140 @@
+                {{> header
+                    include-logo=true
+                    include-slant=true
+                    title="Conestoga<br />Robotics<br />Team"
+                    subtitle="6121 • The Pioneers"
+                    slogan="<prefer-nobr>Be on the team that</prefer-nobr> <prefer-nobr>stands out from the crowd</prefer-nobr>"
+                    media-url="/img/front.jpg"
+                }}
+
+                <!-- white/gray bars that contain info about the team -->
+                <primary-content>
+                    <content-chunks>
+                        <section class="content-chunk" name="about">
+                            <floating-anchor id="about"></floating-anchor>
+
+                            <chunk-text>
+                                <h2>Who?</h2>
+                                <!-- paragraph copied from original site -->
+                                <p>Here at Conestoga High School Robotics, we aim to exceed. As <a href="https://patch.com/pennsylvania/te/conestoga-robotics-team-heading-world-championship-competition">previous contenders</a> for the
+                                    VEX World Championship, we have a great deal of experience in developing robots.
+                                    Whether we are on the field or off, we always aim to bring ’Stoga pride! This year, we
+                                    hope to expand further into our community and spread our passion of robotics.
+                                    We will build robots that will propel us to the highest levels of the
+                                    competition. At Stoga Robotics always expect innovation and hard work. But most of all,
+                                    expect a tradition of excellence!</p>
+                                <p><a href="{{root-link "/about/"}}">Read more</a></p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <slideshow->
+                                    <slideshow-media data-other-srcs="[
+                                            &#x22;{{root-link "/img/gallery/IMG_0736.jpg"}}&#x22;,
+                                            &#x22;{{root-link "/img/gallery/ym4.jpg"}}&#x22;,
+                                            &#x22;{{root-link "/img/gallery/gallery1.jpg"}}&#x22;,
+                                            &#x22;{{root-link "/img/gallery/RX100505.jpg"}}&#x22;
+                                    ]">
+                                        <img src="{{root-link "/img/gallery/IMG_4203.jpg"}}" alt="Team 6121A at the 2019 VRC World Championship!" />
+                                    </slideshow-media>
+
+                                    <slideshow-caption data-other-captions="[
+                                            &#x22;Conestoga Pioneer at Worlds!&#x22;,
+                                            &#x22;Youth mentors at Tredyffrin/Easttown Middle School.&#x22;,
+                                            &#x22;Team 6121C’s robot from the 2017–2018 In the Zone season.&#x22;,
+                                            &#x22;Team 6121C at the 2018 VRC World Championship!&#x22;
+                                    ]">Team 6121A at the 2019 VRC World Championship!</slideshow-caption>
+                                    <slideshow-note>
+                                        <a href="{{root-link "/gallery/"}}">View full gallery</a>
+                                    </slideshow-note>
+                                </slideshow->
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk" name="achievements">
+                            <chunk-decal>
+                                <img src="{{root-link "/img/decal/gallery2.png"}}" />
+                            </chunk-decal>
+                                    
+                            <chunk-text>
+                                <h2>Achievements</h2>
+                                <p>With an influx of new members interested in robotics, the Conestoga Robotics Team is
+                                    traveling ever further through the VEX Robotics Competition tournaments!</p>
+                                <p>Our teams are eager to present their robot deisgns and abilities to the world
+                                    through the robotics events and return with the awards to show for it.</p>
+                                <p><a href="{{root-link "/achievements/"}}">View totals</a></p>
+                            </chunk-text>
+
+                            <chunk-other class="js-required">
+                                <instance-list></instance-list>
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk" name="teams">
+                            <floating-anchor id="teams"></floating-anchor>
+
+                            <chunk-decal>
+                                <img src="{{root-link "/img/decal/DSC_0076.png"}}" />
+                            </chunk-decal>
+
+                            <chunk-text>
+                                <h2>Our teams</h2>
+                                <p>The Pioneers consist of numerous smaller competition teams, each with its own cast
+                                    of engineers that bring along unique collections of ideas and concepts!</p>
+                                <p>Each team has its own page that provides a brief overview of its goals and members,
+                                    along with basic statistics and upcoming events. These pages may be visited using the
+                                    buttons aside.</p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <button-grid>
+                                    {{#each teams}}
+                                    <a href="{{root-link (cat "/teams/" this.number "/")}}">{{this.number}}</a>
+                                    {{/each}}
+                                </button-grid>
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk" name="signups">
+                            <floating-anchor id="signups"></floating-anchor>
+
+                            <chunk-decal>
+                                <img src="{{root-link "/img/decal/gallery5.png"}}" />
+                            </chunk-decal>
+                                    
+                            <chunk-text>
+                                <h2>Club signups</h2>
+                                <p>All Conestoga High School students may enter the robotics program as an extracurricular!
+                                    Teams officially meet weekly to discuss and build their robots, but are encouraged to work on
+                                    projects after school as well. Use the code aside to enter the Schoology group and to
+                                    receive news and notifications about club activities. We hope to see you with us!</p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Schoology code</th>
+                                            <td>9RBCG-G9VCZ</td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <th scope="row">Meeting time</th>
+                                            <td>
+                                                <prefer-nobr>3:00 PM – 4:00 PM</prefer-nobr>
+                                                <br />
+                                                <prefer-nobr>every Thursday</prefer-nobr>
+                                            </td>
+                                        </tr>
+                                    
+                                        <tr>
+                                            <th scope="row">Meeting place</th>
+                                            <td>CHS room 202 (Austin)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </chunk-other>
+                        </section>
+                    </content-chunks>
+                </primary-content>
+
+                <script src="{{root-link "/js/home.js"}}" type="module"></script>

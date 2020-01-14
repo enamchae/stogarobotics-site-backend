@@ -1,0 +1,119 @@
+                {{> header
+                    title="About"
+                    media-url="/img/gallery/IMG_0736.jpg"
+                    media-vertical-offset="45"
+                }}
+                
+                <primary-content>
+                    <content-chunks>
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <p>At Conestoga High School Robotics, we aim to exceed. As <a href="https://patch.com/pennsylvania/te/conestoga-robotics-team-heading-world-championship-competition">previous contenders</a> for the
+                                    VEX World Championship (2018, 2019), we have a great deal of experience in
+                                    developing robots. Whether we are on the field or off, we always aim to bring
+                                    ’Stoga pride!</p>
+                                <p>This year, we hope to expand further into our community and spread
+                                    our passion of robotics. We will build robots that will propel us to the highest
+                                    levels of the competition. With the addition of new teams in our club, we strive to
+                                    bring robotics to every level of knowledge, and further our impact on STEM
+                                    education in school. Our continuous support from our community enables us to reach
+                                    higher, and the VEX program enables a more accessible method of integrating
+                                    robotics in our journey to do so. At ’Stoga Robotics always expect innovation and
+                                    hard work. But most of all, expect a tradition of excellence!</p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <iframe class="google-maps" src="https://maps.google.com/maps?q=conestoga%20high%20school&t=&z=15&ie=UTF8&iwloc=&output=embed"></iframe>
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <div name="statistics">
+                                    <stat-list class="js-required">
+                                        <big-number></big-number>
+                                        <h4 data-singular="World Championship appearance">World Championship appearances</h4>
+
+                                        <big-number></big-number>
+                                        <h4 data-singular="event appearance">event appearances</h4>
+
+                                        <big-number></big-number>
+                                        <h4 data-singular="time Tournament Champions/Finalists">times Tournament Champions/Finalists</h4>
+
+                                        <big-number></big-number>
+                                        <h4 data-singular="time Division Finalist">times Division Finalist </h4>
+                                    </stat-list>
+                                </div>
+
+                                <note-><a href="{{root-link "/achievements/"}}">View more statistics</a></note->
+                            </chunk-text>
+
+                            <chunk-other>
+                                <slideshow->
+                                    <slideshow-media data-other-srcs="{{worlds.srcOthers}}">
+                                        <img{{#if worlds.srcInit}} src="{{worlds.srcInit}}"{{/if}} alt="{{worlds.captionInit}}" />
+                                    </slideshow-media>
+
+                                    <slideshow-caption data-other-captions="{{worlds.captionOthers}}">{{worlds.captionInit}}</slideshow-caption>
+
+                                    <slideshow-note>
+                                        <a href="{{root-link "/gallery/"}}">View full gallery</a>
+                                    </slideshow-note>
+                                </slideshow->
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <h2>VEX Robotics Competition team</h2>
+                                <p>The VEX Robotics Competition is a robotics competition for elementary
+                                    through university students. It is a subset of VEX Robotics, which is in
+                                    turn a subset of Innovation First International.</p>
+                                <p>The Conestoga Robotics
+                                    Team participates in the High School division of the competitions we visit.
+                                    Every year a new challenge is given and teams must create a robot that best
+                                    suits the tasks at hand. With more than 20,000 teams from 50 countries
+                                    playing in over 1,700 competitions worldwide, VRC is one of the fastest
+                                    growing robotics challenges.</p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <slideshow->
+                                    <slideshow-media data-other-srcs="{{vrc.srcOthers}}">
+                                        <img{{#if vrc.srcInit}} src="{{vrc.srcInit}}"{{/if}} alt="{{vrc.captionInit}}" />
+                                    </slideshow-media>
+
+                                    <slideshow-caption data-other-captions="{{vrc.captionOthers}}">{{vrc.captionInit}}</slideshow-caption>
+
+                                    <slideshow-note>
+                                        <a href="{{root-link "/gallery/"}}">View full gallery</a>
+                                    </slideshow-note>
+                                </slideshow->
+                            </chunk-other>
+                        </section>
+
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <h2>Youth Mentorship program</h2>
+                                <p>Every year the Conestoga Robotics Youth Mentorship program assembles a team comprised of club members willing to help with teaching the youth about robotics. The goal is to spark an interest in the young minds to pursue robotics in their future.</p>
+                                <p>To achieve this goal, the youth mentors travel down to middle schools and other youth organizations such as girl scouts, and they present robotics to the aspiring engineers in such a way that is easy for them to understand. The end result of this is that it inspires and builds a passion in the youth for solving real-world problems through automation and robotics.</p>
+                            </chunk-text>
+
+                            <chunk-other>
+                                <slideshow->
+                                    <slideshow-media data-other-srcs="{{ym.srcOthers}}">
+                                        <img{{#if ym.srcInit}} src="{{ym.srcInit}}"{{/if}} alt="{{ym.captionInit}}" />
+                                    </slideshow-media>
+
+                                    <slideshow-caption data-other-captions="{{ym.captionOthers}}">{{ym.captionInit}}</slideshow-caption>
+
+                                    <slideshow-note>
+                                        <a href="{{root-link "/gallery/"}}">View full gallery</a>
+                                    </slideshow-note>
+                                </slideshow->
+                            </chunk-other>
+                        </section>
+                    </content-chunks>
+                </primary-content>
+
+                <script src="{{root-link "/js/about.js"}}" type="module"></script>

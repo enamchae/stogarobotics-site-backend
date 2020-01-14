@@ -1,0 +1,40 @@
+                {{> header
+                    title="Achievements"
+                    media-url="/img/gallery/gallery2.jpg"
+                }}
+
+                <primary-content>
+                    <content-chunks>
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <p>Our total counts of events and awards are displayed here!</p>
+
+                                <noscript><p>JavaScript is required to load and view the data.</p></noscript>
+
+                                {{> team-filters}}
+
+                                <form class="stat-options js-required">
+                                    <h2>Past event attendance</h2>
+                                    <p>To compete against other robots, teams register for VRC events. Teams may advance to higher, larger levels of the competition depending on their performance.</p>
+                                    <p class="foot">These count the number of team appearances. Events are repeated for each participating team.</p>
+                                    <block-grid name="events" class="form-labeled-button-rack"></block-grid>
+
+                                    <h2>Award totals</h2>
+                                    <p>Teams obtain VRC awards at events automatically based on performance or manually
+                                        by a judging committee. Awards signify outstanding design, performance, or
+                                        accomplishments, and are available for many different aspects of the robot or team.</p>
+                                    <p>A list of active VRC award types and their criteria are available in the <a href="https://www.robotevents.com/index.php/events/38192/uploads/5194/download" target="_blank">competition specifications</a>.</p>
+                                    <block-grid name="awards" class="form-labeled-button-rack"></block-grid>
+                                </form>
+
+                                <p class="foot">Data fetched from <a href="https://vexdb.io/">VexDB</a>. Counts may become inaccurate if VexDB falls behind or should there arise unexpected changes to robotevents.com data.</p>
+                            </chunk-text>
+                        </section>
+                    </content-chunks>
+
+                    <aside class="js-required">
+                        <instance-display></instance-display>
+                    </aside>
+                </primary-content>
+
+                <script src="{{root-link "/js/achievements.js"}}" type="module"></script>

@@ -1,0 +1,16 @@
+                {{> header
+                    title=(cat "Error " errorCode)
+                    subtitle=errorName
+                }}
+
+                <!-- white/gray bars that contain info about the team -->
+                <primary-content>
+                    <content-chunks>
+                        <section class="content-chunk">
+                            <chunk-text>
+                                <p>{{errorText}}</p>
+                                <p><a href="{{root-link}}">Take me back home please</a></p>
+                            </chunk-text>
+                        </section>
+                    </content-chunks>
+                </primary-content>

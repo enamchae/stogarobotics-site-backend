@@ -1,0 +1,53 @@
+                <!-- top part of the site that contains the title and image -->
+                <header class="light-on-dark">
+                    <floating-anchor id="header"></floating-anchor>
+
+                    {{#if media-url}}
+                    <!-- image background of the header -->
+                    <header-media>
+                        <img src="{{root-link media-url}}" />
+                    </header-media>
+                    {{/if}}
+
+                    <header-titlecard>
+                        {{#if include-logo}}
+                        <header-logo>
+                            <svg viewbox="0 0 1 1">
+                                <use href="#logo-gear" class="logo-white logo-gear-rotate" />
+                                <use href="#logo-letter" class="logo-white" />
+                            </svg>
+                        </header-logo>
+                        {{/if}}
+
+                        {{#if title}}
+                        <h1>{{{title}}}</h1>
+                        {{/if}}
+
+                        {{#if subtitle}}
+                        <header-subtitle>{{{subtitle}}}</header-subtitle>
+                        {{/if}}
+                    </header-titlecard>
+
+                    {{#if slogan}}
+                    <header-slogan>
+                        {{{slogan}}}
+                    </header-slogan>
+                    {{/if}}
+
+                    {{#if include-slant}}<!-- the SVG that leads into the primary content -->
+                    <svg viewbox="0 0 1 1" preserveaspectratio="none">
+                        <path
+                            style="fill: var(--color-chunk-tone-1);"
+                            d="M 0 0 L 0 1 L 0.5 1 A 0.49999997 0.99999995 0 0 1 0 0 z M 0.5 1 L 1 1 L 1 0 A 0.49999997 0.99999995 0 0 1 0.5 1 z" />
+                    </svg>
+                    {{/if}}
+                </header>
+
+                {{#if media-vertical-offset}}
+                <style>
+                    body {
+                        --header-media-vertical-offset: {{media-vertical-offset}}%;
+                    }
+                </style>
+                {{/if}}
+                
