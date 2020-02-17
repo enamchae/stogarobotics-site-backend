@@ -8,6 +8,7 @@ const {val} = require("../util");
 router.get("/", async (req, res) => {
     res.render("achievements", {
         docTitle: "Achievements",
+        docDesc: "See the event and award history of the Conestoga High School Robotics Team!",
         bodyClassName: "achievementspage",
         teams: val(await db.Team.findAll()),
     });

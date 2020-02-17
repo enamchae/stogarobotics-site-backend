@@ -13,7 +13,7 @@ const config = require("../config-util");
 
 // Redirect to the section on the homepage if no team is specified
 function redirectToHome(res) {
-    res.redirect(`/#teams`);
+    res.redirect(config.prefixRootUrl("/#teams"));
 }
 router.get("/", (req, res) => {
     redirectToHome(res);
@@ -68,6 +68,7 @@ router.get("/:teamNumber/", async (req, res) => {
 
     res.render("teams", {
         docTitle: `Team ${team.number}`,
+        docDesc: `See Team ${team.number}’s roster, statistics, and upcoming events!`,
         bodyClassName: "teampage",
         teams: val(await db.Team.findAll()),
 

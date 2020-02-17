@@ -42,6 +42,7 @@ router.get("/api/images", async (req, res) => {
 
             order: [
                 ["season", "DESC"], // most recent images first
+                ["id", "DESC"], // then most recently added images first
             ],
 
             limit: !isNaN(limit) ? limit : undefined,
@@ -53,6 +54,7 @@ router.get("/api/images", async (req, res) => {
             // image.image_url = config.prefixRootUrl(config.json.galleryImageBaseUrl, image.image_url);
 
             delete image.id;
+            delete image.about_page_category;
         }
 
         apiResponse.n_total_matching_entries = (await db.Image.findAll({where: restraints})).length;
@@ -99,11 +101,16 @@ router.get("/thumb/:filename", async (req, res) => {
 router.get("/", async (req, res) => {
     res.render("gallery", {
         docTitle: "Gallery",
+        docDesc: "The Conestoga High School Robotics Team’s photo library, taken across numerous seasons of robotics action!",
         bodyClassName: "gallerypage",
         teams: val(await db.Team.findAll()),
 
         autoLoadImages: val(await db.Image.findAll({
             limit: 24,
+
+            order: [
+                ["id", "DESC"],
+            ],
         })),
     });
 });

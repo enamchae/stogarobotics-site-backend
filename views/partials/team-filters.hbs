@@ -1,9 +1,9 @@
-                                <filter-rows class="js-required">
-                                    <h4>Filter by team</h4>
-                                    <form class="team-filters form-labeled-button-rack">
-                                        {{#each teams}}
-                                        <input name="team-filter" id="team-filter_{{this.number}}" type="checkbox" value="{{this.number}}" />
-                                        <label for="team-filter_{{this.number}}">{{this.number_short}}</label>
-                                        {{/each}}
-                                    </form>
-                                </filter-rows>
+<filter-rows class="js-required">
+    <h4>Filter by team</h4>
+    <form class="team-filters form-labeled-button-rack">
+        {{#each teams}}
+        <input name="team-filter" id="team-filter_{{this.number}}" type="checkbox" value="{{this.number}}" />
+        <label for="team-filter_{{this.number}}">{{this.number_short}}</label>
+        {{/each}}
+    </form>
+</filter-rows>

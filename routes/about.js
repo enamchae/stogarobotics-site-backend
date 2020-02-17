@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
         // worldsImageCaptionOthers: JSON.stringify(captions),
 
         worlds: await queryDbImages(1, image => `Team ${image.team_number} at Worlds!`),
-        ym: await queryDbImages(2, () => "Youth mentors showing Tredyffrin/Easttown Middle School students how to drive the robots."),
+        ym: await queryDbImages(2, () => "Youth mentors at the middle schools!"),
         vrc: await queryDbImages(3, () => "Building robots and competing for VRC matches."),
     });
 

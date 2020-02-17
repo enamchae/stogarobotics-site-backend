@@ -3,3 +3,4 @@ _STATIC_PUBLIC
 _UNUSED_CODE_LAND
 db/seeders/*
 db/database.sqlite
+tmp/
